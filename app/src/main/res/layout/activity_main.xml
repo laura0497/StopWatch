@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blancoContenedor"
+    android:gravity="center">
+
+
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="2dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:cardBackgroundColor="@color/blancoContenedor"
+        app:cardElevation="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        card_view:cardCornerRadius="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayoutArriba"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center">
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayoutCirculo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.CardView
+
+                        android:id="@+id/timerCardView"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                        app:cardBackgroundColor="@color/blancoCardView"
+                        app:cardElevation="3dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        card_view:cardCornerRadius="100dp">
+
+                        <RelativeLayout
+                            android:layout_width="221dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayoutTexto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/minutos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="@string/minutos"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="48sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_M"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@+id/segundos"
+                                    android:layout_alignBottom="@+id/segundos"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_toEndOf="@+id/minutos"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="@string/M"
+                                    android:textColor="@color/Reset"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:text="M" />
+
+                                <TextView
+                                    android:id="@+id/segundos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="@string/segundos"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="48sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_S"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@+id/segundos"
+                                    android:layout_alignBottom="@+id/segundos"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_toEndOf="@+id/segundos"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="@string/S"
+                                    android:textColor="@color/Reset"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:text="S" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/milisegundos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/LinearLayoutTexto"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="56dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/milisegundos"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="28sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <Entidades.TimerView
+                    android:id="@+id/timerAnimacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/relativeLayoutCirculo"
+                    android:layout_alignEnd="@+id/relativeLayoutCirculo"
+                    android:layout_alignParentTop="true"
+                    app:circleColor="@color/Naranja" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="3dp"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/Reset"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="35dp"
+                    android:background="@drawable/d1_stop"
+                    android:onClick="Resetear"
+                    android:text="@string/reset" />
+
+                <ImageButton
+                    android:id="@+id/Iniciar"
+                    android:layout_width="55dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="35dp"
+                    android:background="@drawable/d1_play"
+                    android:onClick="Inicio"
+                    android:text="@string/iniciar" />
+
+                <ImageButton
+                    android:id="@+id/lapButton"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/d1_lap"
+                    android:onClick="Vuelta"
+                    android:text="@string/Laps" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/RView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/relativeLayoutArriba"
+                android:background="#f0f0f0"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                android:paddingTop="6dp"
+                android:scrollbars="vertical"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

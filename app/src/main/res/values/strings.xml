@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cronometro</string>
+
+    <string name="iniciar">Iniciar</string>
+    <string name="reset">Reset</string>
+    <string name="parar">Parar</string>
+    <string name="Laps">Laps</string>
+    <string name="minutos">00</string>
+    <string name="segundos">00</string>
+    <string name="milisegundos">000</string>
+    <string name="M">M</string>
+    <string name="S">S</string>
+</resources>

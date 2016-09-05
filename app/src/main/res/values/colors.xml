@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796b</color>
+    <color name="colorAccent">#009688</color>
+
+    <color name="blancoContenedor">#f0f0f0</color>
+    <color name="blancoCardView">#F5F5F5</color>
+    <color name="black_overlay">#66000000</color>
+
+
+
+    <color name="Naranja">#FF5722</color>
+    <color name="Stop">#C2185B</color>
+    <color name="Reset">#009688</color>
+    <color name="Running">#3F51B5</color>
+</resources>

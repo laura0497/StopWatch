@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Contedor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="3dp"
+    android:background="@color/blancoContenedor"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:id="@+id/vueltaCont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:layout_marginEnd="14dp"
+            android:layout_marginLeft="50dp"
+            android:layout_toStartOf="@+id/tiempo"
+            android:background="@color/blancoContenedor"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="left"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right"
+            android:background="@color/blancoContenedor"
+            android:fontFamily="sans-serif-light"
+            android:gravity="right"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
